@@ -210,3 +210,5 @@ endif
 PRODUCT_PROPERTY_OVERRIDES += \
   ro.cm.version=$(CM_VERSION) \
   ro.modversion=$(CM_VERSION)
+
+$(call inherit-product, vendor/pizza/products/pizza_ace.mk)
