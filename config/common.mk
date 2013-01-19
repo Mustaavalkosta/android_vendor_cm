@@ -128,7 +128,9 @@ PRODUCT_PACKAGES += \
     Camera \
     Development \
     LatinIME \
-    SpareParts
+    SpareParts \
+    Superuser \
+    su
 
 # Optional CM packages
 PRODUCT_PACKAGES += \
