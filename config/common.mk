@@ -120,9 +120,7 @@ include vendor/cm/config/themes_common.mk
 PRODUCT_PACKAGES += \
     Camera \
     Development \
-    LatinIME \
-    Superuser \
-    su
+    LatinIME
 
 # Optional CM packages
 PRODUCT_PACKAGES += \
