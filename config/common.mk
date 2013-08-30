@@ -98,6 +98,10 @@ PRODUCT_COPY_FILES += \
     vendor/cm/prebuilt/common/bin/compcache:system/bin/compcache \
     vendor/cm/prebuilt/common/bin/handle_compcache:system/bin/handle_compcache
 
+# block stock OTAs
+PRODUCT_COPY_FILES += \
+    vendor/cm/prebuilt/common/bin/otablock:system/bin/otablock
+
 # Terminal Emulator
 PRODUCT_COPY_FILES +=  \
     vendor/cm/proprietary/Term.apk:system/app/Term.apk \
@@ -225,7 +229,7 @@ CM_VERSION := $(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR)-$(shell date -u 
 PRODUCT_PROPERTY_OVERRIDES += \
   ro.modversion=$(CM_VERSION)
 
-
+-include vendor/cm/sepolicy/sepolicy.mk
 -include $(WORKSPACE)/hudson/image-auto-bits.mk
 
 $(call inherit-product, vendor/pizza/products/pizza_ace.mk)
